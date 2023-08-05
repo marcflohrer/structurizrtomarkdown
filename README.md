@@ -4,7 +4,7 @@ Converts structurizr workspace.json into a interface description list listing th
 
 ## Prerequisites
 
-You need a workspace.json file from structurizr. See https://structurizr.com/help/express/structurizr-json
+You need a workspace.json file from [structurizr](https://structurizr.com/help/express/structurizr-json)
 that has relationships between interfaces and components with properties on the interfaces.
 The properties for all interfaces need to have the same keys
 
