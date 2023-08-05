@@ -1,0 +1,1 @@
+docker run -it --rm -v "PATH:/app/input/" lohrer/structurizr2markdown /app/input/workspace.json
