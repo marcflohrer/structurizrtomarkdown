@@ -12,7 +12,7 @@ The properties for all interfaces need to have the same keys
 
 It takes a workspace.json as input that has to contain properties on the relationships like this:
 
-```json
+```dsl
 workspace {
     model {
         user = person "User" "A user of my software system."
@@ -29,7 +29,7 @@ workspace {
         user -> softwareSystem1 "Uses" {
             properties {
                 "Encryption" "Yes, TLS 1.2"
-                "Data classiciation" "Personal data"
+                "Data classifiation" "Personal data"
                 "Purpose" "User management"
             }
         }
@@ -42,7 +42,7 @@ The output is a markdown file named `workspace.md` that looks like this:
 
 ```markdown
 
-| Encryption | Data classiciation | Purpose |
+| Encryption | Data classifiation | Purpose |
 | :--- | :--- | :--- |
 | Yes, TLS 1.2 | Personal data | User management |
 ``````
