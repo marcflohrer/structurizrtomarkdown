@@ -8,6 +8,45 @@ You need a workspace.json file from [structurizr](https://structurizr.com/help/e
 that has relationships between interfaces and components with properties on the interfaces.
 The properties for all interfaces need to have the same keys
 
+## Feature
+
+It takes a workspace.json as input that has to contain properties on the relationships like this:
+
+```json
+workspace {
+    model {
+        user = person "User" "A user of my software system."
+        softwareSystem1 = softwareSystem "Software System" "My software system." {
+            container1 = container "Internal Container" {
+                component1 = component "component" {
+                    perspectives {
+                        "view" "dsgvo"
+                    }
+                }
+            }
+        }
+
+        user -> softwareSystem1 "Uses" {
+            properties {
+                "Encryption" "Yes, TLS 1.2"
+                "Data classiciation" "Personal data"
+                "Purpose" "User management"
+            }
+        }
+    }
+```
+
+The above shows the corresponding workspace.dsl but the json file is derived from it.
+
+The output is a markdown file named `workspace.md` that looks like this:
+
+```markdown
+
+| Encryption | Data classiciation | Purpose |
+| :--- | :--- | :--- |
+| Yes, TLS 1.2 | Personal data | User management |
+``````
+
 ## Usage
 
 ### From sources
